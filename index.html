@@ -2,37 +2,81 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Village Supermarket — Fine food is our passion</title>
     <meta name="description" content="Village Supermarket is a family-run food market in Dar es Salaam and Arusha. Imported groceries, a butcher counter, in-house bakery, wine market, café and gelato." />
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content="Village Supermarket" />
     <meta property="og:description" content="Boutique-style food markets in Slipway, Dar es Salaam and Arusha. Fine food is our passion." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/village-supermarket/cover.png" />
+    <meta property="og:url" content="https://essamnks2020-dev.github.io/village-supermarket/" />
+    <meta property="og:image" content="https://essamnks2020-dev.github.io/village-supermarket/cover.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="Village Supermarket — produce, bakery and the butcher under one roof" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Village Supermarket" />
     <meta name="twitter:description" content="Boutique-style food markets in Slipway, Dar es Salaam and Arusha." />
-    <meta name="twitter:image" content="/village-supermarket/cover.png" />
-    <link rel="icon" type="image/svg+xml" href="/village-supermarket/favicon.svg" />
-    <link rel="image_src" href="/village-supermarket/cover.png" />
-    <link rel="preload" as="image" href="/village-supermarket/cover.png" fetchpriority="high" />
-    <link rel="preload" as="image" href="/village-supermarket/photos/hero.webp" fetchpriority="high" />
+    <meta name="twitter:image" content="https://essamnks2020-dev.github.io/village-supermarket/cover.png" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="image_src" href="https://essamnks2020-dev.github.io/village-supermarket/cover.png" />
+    <link rel="preload" as="image" href="./photos/hero.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="./cover.webp" type="image/webp" />
+    <link rel="preload" as="image" href="./photos/b1.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <style>
+      html, body { margin: 0; background: #1c1814; color: #f8f7f2; }
+      #first-frame {
+        position: fixed; inset: 0; z-index: 30;
+        background: #1c1814;
+        overflow: hidden;
+      }
+      #first-frame img {
+        position: absolute; inset: 0;
+        width: 100%; height: 100%;
+        object-fit: cover;
+        filter: saturate(.86) contrast(1.05) brightness(1.03);
+      }
+      #first-frame .veil {
+        position: absolute; inset: 0;
+        background: linear-gradient(90deg, rgba(26,20,16,.92) 0%, rgba(44,36,28,.48) 55%, rgba(26,20,16,.12) 100%);
+      }
+      #first-frame .copy {
+        position: absolute; left: 20px; right: 20px; bottom: 48px; max-width: 720px;
+        font-family: Georgia, 'Times New Roman', serif;
+      }
+      #first-frame p {
+        margin: 0 0 14px;
+        font-family: ui-monospace, monospace;
+        font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+        color: #e6dcc8;
+      }
+      #first-frame h1 {
+        margin: 0;
+        font-size: clamp(2.6rem, 9vw, 6.4rem);
+        line-height: .86; font-weight: 400; letter-spacing: -.04em;
+      }
+      #first-frame em { font-style: italic; }
+      #first-frame.is-off { display: none; }
+      #root { min-height: 100dvh; }
       replit-banner, replit-dev-banner, [data-replit-badge], [data-replit-dev-banner],
       .replit-badge, .replit-dev-banner, #replit-badge, #made-with-replit,
       a[href*="replit.com"][style*="position: fixed"], a[href*="replit.com"][style*="position:fixed"],
       iframe[src*="replit.com/public"] { display: none !important; visibility: hidden !important; pointer-events: none !important; }
     </style>
-    <script type="module" crossorigin src="/village-supermarket/assets/index-C7GIVyeR.js"></script>
-    <link rel="stylesheet" crossorigin href="/village-supermarket/assets/index-8CTrbU1f.css">
+    <script type="module" crossorigin src="/village-supermarket/assets/index-4ZQBoDp2.js"></script>
+    <link rel="stylesheet" crossorigin href="/village-supermarket/assets/index-CgVkZwTf.css">
   </head>
   <body>
+    <div id="first-frame">
+      <img src="./photos/hero.webp" alt="Village Supermarket — butcher, bakery and produce under one roof" width="1920" height="1280" fetchpriority="high" decoding="sync" />
+      <div class="veil"></div>
+      <div class="copy">
+        <p>Village Supermarket Ltd · Dar es Salaam · Arusha · Since 2004</p>
+        <h1>Fine food<br /><em>is our passion.</em></h1>
+      </div>
+    </div>
     <div id="root"></div>
   </body>
 </html>
